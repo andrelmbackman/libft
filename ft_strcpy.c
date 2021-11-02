@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 15:16:24 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/02 16:46:28 by abackman         ###   ########.fr       */
+/*   Created: 2021/11/02 16:34:42 by abackman          #+#    #+#             */
+/*   Updated: 2021/11/02 16:53:01 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-void	ft_putchar(char c);
-void	ft_putstr(char const *str);
-void	ft_putnbr(int n);
-int		ft_strlen(char const *str);
-char	*ft_strdup(char *str);
-char	*ft_strcpy(char *des, const char *src);
-#endif
-
+char	*ft_strcpy(char *des, const char *src)
+{
+	int	i;
+	
+	i = 0;
+	while (src[i] != '\0')
+	{
+		des[i] = src[i];
+		i++;
+	}	
+	des[i] = '\0';
+	return (des);
+}

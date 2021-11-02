@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abackman <abackman@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 15:16:24 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/02 16:46:28 by abackman         ###   ########.fr       */
+/*   Created: 2021/11/02 17:24:07 by abackman          #+#    #+#             */
+/*   Updated: 2021/11/02 17:26:24 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-void	ft_putchar(char c);
-void	ft_putstr(char const *str);
-void	ft_putnbr(int n);
-int		ft_strlen(char const *str);
-char	*ft_strdup(char *str);
-char	*ft_strcpy(char *des, const char *src);
-#endif
+#include <string.h>
+#include "libft.h"
 
+char	*ft_strncpy(char *dst, const char *str, t_size len)
+{
+	int	i;
+
+	i = ft_strlen(str);
+
+}
