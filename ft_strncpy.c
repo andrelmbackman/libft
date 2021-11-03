@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 17:24:07 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/03 17:30:26 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/03 17:57:25 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,13 @@ char	*ft_strncpy(char *des, const char *src, size_t len)
 
 	i = ft_strlen(src);
 	j = 0;
-
 	while (j < len)
 	{
-		if (src[j] != '\0')
-		{
-			des[j] = src[j];
-			j++;
-		}
-		else
-		{
-			des[len - j] = '\0';
-			j++;
-		}
+		des[j] = src[j];
+		j++;
 	}
-	des[j] = '\0';
-/*	if (i < len)
+
+	if (i < len)
 	{
 		while (i < len)
 		{
@@ -43,8 +34,8 @@ char	*ft_strncpy(char *des, const char *src, size_t len)
 		}
 		des[i] = '\0';
 	}
-	else
+/*	else
 		des[j] = '\0';
-*/
+		*/
 	return (des);
 }
