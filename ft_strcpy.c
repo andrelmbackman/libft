@@ -6,14 +6,14 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:34:42 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/02 16:53:01 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/03 17:29:53 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcpy(char *des, const char *src)
 {
 	int	i;
-	
+
 	i = 0;
 	while (src[i] != '\0')
 	{
