@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abackman <abackman@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 15:59:42 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/04 13:59:27 by abackman         ###   ########.fr       */
+/*   Created: 2021/11/04 16:42:03 by abackman          #+#    #+#             */
+/*   Updated: 2021/11/04 16:48:31 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-void	*ft_memcpy(void *des, const void *src, size_t len)
+char	*ft_strncat(char *des, const char *src, size_t n)
 {
-	char	*d;
-	char	*s;
-	int		i;
+	int	i;
+	int	j;
 
-	d = (char *)des;
-	s = (char *)src;
-	i = 0;
-	while (len > 0)
+	i = ft_strlen(des);
+	j = 0;
+	while (n > 0)
 	{
-		d[i] = s[i];
-		i++;
-		len--;
+		des[i++] = src[j++];
+		n--;
 	}
-	return (d);
+	des[i] = '\0';
+	return (des);
 }
