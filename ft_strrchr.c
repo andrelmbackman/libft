@@ -1,33 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 17:24:07 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/05 13:32:31 by abackman         ###   ########.fr       */
+/*   Created: 2021/11/05 13:23:34 by abackman          #+#    #+#             */
+/*   Updated: 2021/11/05 13:30:00 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-char	*ft_strncpy(char *des, const char *src, size_t len)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned long	i;
-	unsigned long	j;
+	char	*p;
+	int		i;
+	int		j;
 
-	i = ft_strlen(src);
-	j = 0;
-	while (j < len)
+	i = 0;
+	j = (ft_strlen(s) + 1);
+	p = NULL;
+	while (j > i && s[j] != c)
 	{
-		des[j] = src[j];
-		j++;
+		j--;
+		p = (char *)&s[j];
 	}
-	if (i < len)
+	if (s[j] == c)
 	{
-		ft_bzero((des + j), (len - i));
+		return (p);
 	}
-	return (des);
+	else
+	{
+		return (NULL);
+	}
 }

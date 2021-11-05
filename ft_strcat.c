@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abackman <abackman@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:16:46 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/04 16:26:11 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/05 13:35:48 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strcat(char *des, const char *src)
 {
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 
 	i = ft_strlen(des);
 	j = 0;

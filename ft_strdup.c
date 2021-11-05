@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:05:27 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/03 14:52:08 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/05 13:34:10 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char	*ft_strdup(char *src)
 {
-	int		i;
+	size_t	i;
 	char	*str;
 
 	i = ft_strlen(src);
