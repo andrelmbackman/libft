@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 13:23:34 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/05 13:57:02 by abackman         ###   ########.fr       */
+/*   Created: 2021/11/05 10:21:33 by abackman          #+#    #+#             */
+/*   Updated: 2021/11/05 13:27:32 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
+#include <stdio.h>
 
-char	*ft_strrchr(const char *s, int c)
+int	main()
 {
-	char	*p;
-	size_t	i;
-	size_t	j;
+	char	str1[20] = "Hello World!";
+	char	c;
 
-	i = 0;
-	j = ft_strlen(s);
-	p = NULL;
-	while (j >= i)
-	{	
-		if (s[j] == c)
-		{	
-			p = (char *)&s[j];
-			break ;
-		}
-		j--;
-	}
-	if (s[j] == c)
-	{
-		return (p);
-	}
-	else
-	{
-		return (NULL);
-	}
+	c = '\0';
+	printf("strrchr: the address of '%c' in %s is %p\n", c, str1, strrchr(str1, c));
+	printf("ft_strrchr: the address of '%c' in %s is %p\n", c, str1, ft_strrchr(str1, c));
+	return (0);
 }
