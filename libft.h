@@ -6,17 +6,17 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:16:24 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/04 17:12:02 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/05 11:16:17 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <string.h>
 void	ft_putchar(char c);
-void	ft_putstr(char const *str);
+void	ft_putstr(char *s);
 void	ft_putnbr(int n);
 void	*ft_memset(void *ptr, int x, size_t len);
 void	ft_bzero(void *str, size_t len);

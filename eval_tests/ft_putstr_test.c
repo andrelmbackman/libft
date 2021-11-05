@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putstr_test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abackman <abackman@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 12:22:16 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/05 12:22:37 by abackman         ###   ########.fr       */
+/*   Created: 2021/11/05 10:21:33 by abackman          #+#    #+#             */
+/*   Updated: 2021/11/05 11:17:46 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t len)
+int	main()
 {
-	ft_memset(str, '\0', len);
+	char	str[] = "Hello World!";
+	ft_putstr(str);
+	return (0);
 }

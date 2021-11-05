@@ -1,36 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 14:13:25 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/04 15:29:34 by abackman         ###   ########.fr       */
+/*   Created: 2021/11/05 10:21:33 by abackman          #+#    #+#             */
+/*   Updated: 2021/11/05 12:05:38 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	main()
 {
-	char	*ret;
-	int		i;
-
-	i = 0;
-	ret = (char *)s;
-	while (n > 0 && ret[i] != (char)c)
-	{
-		i++;
-		n--;
-	}
-	if (ret[i] == (char)c)
-	{
-		return (ret + i);
-	}
-	else
-	{
-		return (NULL);
-	}
+	ft_putchar('z');
+	return (0);
 }

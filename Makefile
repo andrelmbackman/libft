@@ -8,7 +8,8 @@ all: $(NAME)
 
 $(NAME):
 	gcc $(WRNG) -c $(SRC)
-	ar rcs $(NAME) *.o
+	ar rc $(NAME) *.o
+	ranlib $(NAME)
 
 clean:
 	/bin/rm -f *.o
