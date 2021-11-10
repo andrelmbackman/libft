@@ -6,13 +6,15 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:35:38 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/05 13:34:47 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/05 13:40:07 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+
 size_t	ft_strlen(const char *str)
 {
-	size_t	i;
+	unsigned long	i;
 
 	i = 0;
 	while (str[i] != '\0')
