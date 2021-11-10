@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr_test.c                                  :+:      :+:    :+:   */
+/*   ft_memccpy_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:21:33 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/08 10:21:49 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/10 10:55:13 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,18 @@
 
 int	main()
 {
-	char	str1[20] = "Hello World!";
-	char	c;
+	char	str1[30] = "Hello World! Vote for Pedro.";
+	char	str2[] = "Pedro";
+	char	str3[30] = "Hello World! Vote for Pedro.";
+	char	*p;
+	int		c = 'o';
 
-	c = 'o';
-	printf("strrchr: the address of '%c' in %s is %p\n", c, str1, strrchr(str1, c));
-	printf("ft_strrchr: the address of '%c' in %s is %p\n", c, str1, ft_strrchr(str1, c));
+	printf("str1: %s\nstr2: %s\n\n", str1, str2);
+	p = ft_memccpy(str1, str2, c, 5);
+	printf("ft_memccpy: str1: %s\nstr2: %s\naddress of %c: %p\n\n", str1, str2, c, p);
+	ft_strcpy(str1, str3);
+	printf("str1: %s\nstr2: %s\n\n", str1, str2);
+	p = memccpy(str1, str2, c, 5);
+	printf("memccpy:    str1: %s\nstr2: %s\naddress of %c: %p\n\n", str1, str2, c, p);
 	return (0);
 }
