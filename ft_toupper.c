@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 13:04:08 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/10 13:18:30 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/15 11:05:07 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_toupper(int c)
 	unsigned char	ch;
 
 	ch = (unsigned char)c;
-	if((ch - 32) >= 'A' && (ch - 32) <= 'Z')
+	if ((ch - 32) >= 'A' && (ch - 32) <= 'Z')
 	{
 		ch = ch - 32;
 		return (ch);

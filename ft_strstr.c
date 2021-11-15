@@ -6,12 +6,11 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 16:57:43 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/08 15:25:41 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/15 11:04:17 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 static	int	checkstr(const char *h, const char *n, size_t i, size_t j);
 

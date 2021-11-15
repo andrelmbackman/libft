@@ -6,11 +6,11 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:35:38 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/05 13:40:07 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/15 11:03:30 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
