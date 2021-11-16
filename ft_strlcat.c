@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:52:13 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/15 11:03:15 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/16 16:26:35 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,14 @@ size_t	ft_strlcat(char *des, const char *src, size_t dstsize)
 	i = ft_strlen(des);
 	j = 0;
 	l = i + ft_strlen(src);
-	while ((i + j) < dstsize && src[j] != '\0')
+	if (dstsize < i || dstsize < 1)
+		return (dstsize + ft_strlen(src));
+	while ((i + j) < (dstsize - 1) && src[j] != '\0')
 	{
 		des[i + j] = src[j];
 		j++;
 	}
-	des[dstsize - 1] = '\0';
+	if (dstsize != 0)
+		des[i + j] = '\0';
 	return (l);
 }
