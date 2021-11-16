@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:42:03 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/15 11:03:39 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/16 14:12:01 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strncat(char *des, const char *src, size_t n)
 
 	i = ft_strlen(des);
 	j = 0;
-	while (n > 0)
+	while (n > 0 && src[j] != '\0')
 	{
 		des[i++] = src[j++];
 		n--;
