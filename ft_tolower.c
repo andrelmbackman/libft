@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 13:04:08 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/15 11:05:01 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/16 14:26:22 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_tolower(int c)
 	unsigned char	ch;
 
 	ch = (unsigned char)c;
-	if ((ch + 32) >= 'A' && (ch + 32) <= 'Z')
+	if ((ch + 32) >= 'a' && (ch + 32) <= 'z')
 	{
 		ch = ch + 32;
 		return (ch);
