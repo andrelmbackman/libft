@@ -3,26 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abackman <abackman@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 17:10:48 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/05 17:11:37 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/16 12:19:16 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strcmp(const char *s1, const char *s2)
 {	
-	int	i;
-	int	j;
-	int	res;
+	int				i;
+	unsigned char	c1;
+	unsigned char	c2;
 
 	i = 0;
-	j = 0;
-	while (s1[i] == s2[j] && s1[i] != '\0' && s2[j] != '\0')
+	while (s1[i] == s2[i] && (s1[i] != '\0') && (s2[i] != '\0'))
 	{	
 		i++;
-		j++;
 	}
-	res = s1[i] - s2[j];
-	return (res);
+	c1 = (unsigned char)s1[i];
+	c2 = (unsigned char)s2[i];
+	return (c1 - c2);
 }
