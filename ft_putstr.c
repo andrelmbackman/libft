@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:22:23 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/05 11:15:29 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/23 15:59:42 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,16 @@
 
 void	ft_putstr(char *s)
 {
-	int	i;
+	int				i;
+	unsigned char	ch;
 
 	i = 0;
+	if (s == NULL)
+		return ;
 	while (s[i] != '\0')
 	{
-		ft_putchar(s[i]);
+		ch = (unsigned char)s[i];
+		write(1, &ch, 1);
 		i++;
 	}
 }

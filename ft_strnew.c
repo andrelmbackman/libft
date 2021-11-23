@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 12:57:56 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/11 17:25:19 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:55:50 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ char	*ft_strnew(size_t size)
 {
 	char	*str;
 
-	str = (char *)malloc(size * sizeof(char));
+	str = (char *)malloc((size + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	else
 	{
-		ft_bzero(str, size);
+		ft_bzero(str, size + 1);
 		return (str);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:05:27 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/16 15:14:11 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/23 15:47:18 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strdup(char *src)
 
 	i = ft_strlen(src);
 	str = (char *)ft_memalloc((i + 1) * sizeof(char));
+	if (str == NULL)
+		return (NULL);
 	i = 0;
 	while (src[i] != '\0')
 	{
