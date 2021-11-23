@@ -6,21 +6,14 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 15:03:24 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/10 16:56:39 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:41:29 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	unsigned char	ch;
-
-	ch = (unsigned char)c;
-	if (ch >= '0' && ch <= '9')
-	{
+	if (c >= '0' && c <= '9')
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }
