@@ -6,34 +6,37 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:37:33 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/11 16:15:55 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/24 16:25:56 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *des, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char			*str;
-	unsigned long			i;
+	size_t					i;
 	unsigned char			*d;
 	unsigned char			*s;
 
+	if (dst == NULL && src == NULL)
+		return (NULL);
 	i = 0;
-	d = (unsigned char *)des;
+	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
-	str = (unsigned char *)ft_memalloc(n * sizeof(unsigned char));
-	while (i < n)
+	if (d > s)
 	{
-		str[i] = s[i];
-		i++;
+		while (len-- > 0)
+		{
+			d[len] = s[len];
+		}
 	}
-	i = 0;
-	while (i < n)
+	else
 	{
-		d[i] = str[i];
-		i++;
+		while (i < len)
+		{
+			d[i] = s[i];
+			i++;
+		}
 	}
-	free(str);
-	return (des);
+	return (dst);
 }

@@ -6,26 +6,28 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:59:42 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/15 11:01:45 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/24 17:41:25 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *des, const void *src, size_t len)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char	*d;
 	char	*s;
-	int		i;
+	size_t	i;
 
-	d = (char *)des;
+	if (dst == NULL && src == NULL)
+		return (NULL);
+	d = (char *)dst;
 	s = (char *)src;
 	i = 0;
-	while (len > 0)
+	while (n > 0)
 	{
 		d[i] = s[i];
 		i++;
-		len--;
+		n--;
 	}
 	return (d);
 }
