@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 12:22:16 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/11 13:03:38 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:53:38 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_bzero(void *str, size_t len)
 {
-	ft_memset(str, '\0', len);
+	ft_memset(str, 0, len);
 }
