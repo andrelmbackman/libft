@@ -6,63 +6,44 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 13:35:56 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/16 18:01:17 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/24 14:39:16 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	checkstrn(const char *h, const char *n, size_t i, size_t len);
-
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
-{
-	char	*p;
-	int		res;
-
-	p = NULL;
-	res = checkstrn(haystack, needle, 0, len);
-	if (len < 1)
-		return (NULL);
-	if (needle[0] == '\0')
-	{
-		return ((char *) haystack);
-	}
-	else if (res >= 0)
-	{
-		p = (char *)&haystack[res];
-		return (p);
-	}
-	else
-	{
-		return (NULL);
-	}
-}
-
-static	int	checkstrn(const char *h, const char *n, size_t i, size_t len)
+static	int	ft_checkstrn(const char *h, const char *n, size_t i, size_t len)
 {
 	size_t	j;
 
-	j = 0;
-	while (len > 0 && n[j] != '\0')
+	while (len > 0 && h[i] != '\0')
 	{
+		j = 0;
 		if (h[i] == n[j])
 		{
-			i++;
-			j++;
+			while (h[i + j] == n[j])
+			{
+				j++;
+				len--;
+				if (n[j] == '\0')
+					return (i);
+			}
 		}
-		else
-		{
-			j = 0;
-			i++;
-		}
+		i++;
 		len--;
 	}
-	if (n[j] == '\0')
-	{
-		return (i - j);
-	}
+	return (-1);
+}
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+	int		res;
+
+	if (needle[0] == '\0')
+		return ((char *)haystack);
+	res = ft_checkstrn(haystack, needle, 0, len);
+	if (res >= 0)
+		return ((char *)&haystack[res]);
 	else
-	{
-		return (-1);
-	}
+		return (NULL);
 }
