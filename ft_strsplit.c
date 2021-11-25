@@ -6,27 +6,11 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 11:38:48 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/24 17:30:43 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/25 16:28:54 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static	size_t	ft_countwords(const char *s, char c)
-{
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	j = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
-			j++;
-		i++;
-	}
-	return (j);
-}
 
 char	**ft_strsplit(const char *s, char c)
 {
