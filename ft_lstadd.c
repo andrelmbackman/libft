@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 12:29:56 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/25 13:24:17 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/25 18:00:23 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,8 @@
 void	ft_lstadd(t_list **alst, t_list *new)
 {
 	if (alst && new)
+	{
+		new->next = (*alst);
 		(*alst) = new;
+	}
 }
