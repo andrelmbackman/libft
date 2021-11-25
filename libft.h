@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:16:24 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/25 16:21:19 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/25 16:30:59 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,8 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 char	*ft_itoa(int n);
 char	*ft_strmap(const char *s, char (*f)(char));
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
-size_t	ft_strlen(char const *s);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strdup(const char *s1);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
@@ -66,6 +64,10 @@ char	*ft_strsub(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s);
 char	**ft_strsplit(const char *s, char c);
+size_t	ft_strlen(char const *s);
+size_t	ft_countwords(const char *s, char c);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+int		ft_longlen(long n);
 int		ft_strequ(const char *s1, const char *s2);
 int		ft_strnequ(const char *s1, const char *s2, size_t n);
 int		ft_strcmp(const char *s1, const char *s2);
