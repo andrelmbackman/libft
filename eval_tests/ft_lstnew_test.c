@@ -1,32 +1,19 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 18:32:42 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/23 10:03:47 by abackman         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
-#include <fcntl.h>
+#include <stdlib.h>
 #include <stdio.h>
 
 int	main(void)
 {
 	int 	tests_passed = 0;
 
-	int		content[] = {11, 12, 13, 14, 15};
+	int		content[] = {1, 2, 3, 4, 5};
 	t_list	*new = ft_lstnew(content, sizeof(int)*5);
 
 	content[0] = 0;
 
 	for (int i = 0; i < 5; i++)
 	{
-		printf("source: %d, new->content: %d\n", i, ((int *)new->content)[i]);
-		if (((int*)new->content)[i] == i + 11)
+		if (((int*)new->content)[i] == i + 1)
 			tests_passed++;
 		else
 			printf("\nERROR: ((int*)new->content)[i] != %d\n%d\n", i, ((int*)new->content)[i]);
