@@ -6,23 +6,23 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 16:16:46 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/05 13:35:48 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/25 16:01:42 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *des, const char *src)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	size_t	i;
 	size_t	j;
 
-	i = ft_strlen(des);
+	i = ft_strlen(s1);
 	j = 0;
-	while (src[j] != '\0')
+	while (s2[j] != '\0')
 	{
-		des[i++] = src[j++];
+		s1[i++] = s2[j++];
 	}
-	des[i] = '\0';
-	return (des);
+	s1[i] = '\0';
+	return (s1);
 }

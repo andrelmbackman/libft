@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 12:15:59 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/22 16:05:38 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/25 14:08:24 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@ t_list	*ft_lstnew(const void *content, size_t content_size)
 		new->content_size = content_size;
 	}
 	else
+	{
+		free(new);
 		return (NULL);
+	}
 	new->next = NULL;
 	return (new);
 }

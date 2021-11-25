@@ -6,13 +6,13 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 12:22:16 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/23 16:53:38 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/25 15:51:02 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t len)
+void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(str, 0, len);
+	ft_memset(s, 0, n);
 }

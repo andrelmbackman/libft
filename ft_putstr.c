@@ -6,13 +6,13 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:22:23 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/23 15:59:42 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/25 16:18:43 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *s)
+void	ft_putstr(const char *s)
 {
 	int				i;
 	unsigned char	ch;

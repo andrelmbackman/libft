@@ -6,31 +6,11 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 14:19:59 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/24 13:23:47 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/25 16:27:29 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static	int	ft_intlen(long n)
-{
-	int	length;
-
-	length = 0;
-	if (n == 0)
-		return (1);
-	if (n < 0)
-	{
-		n *= -1;
-		length++;
-	}
-	while (n > 0)
-	{
-		n /= 10;
-		length++;
-	}
-	return (length);
-}
 
 char	*ft_itoa(int n)
 {
@@ -39,7 +19,7 @@ char	*ft_itoa(int n)
 	long	num;
 
 	num = (long)n;
-	length = ft_intlen(num);
+	length = ft_longlen(num);
 	str = (char *)malloc((length + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
