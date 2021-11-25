@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:21:33 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/10 11:29:55 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/25 18:13:21 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main()
 	char	str3[30] = "Hello World! Vote for Pedro.";
 	char	*p;
 
-	printf("str1: %s\nstr2: %s\n", str1, str2);
+	printf("\n\nstr1: %s\nstr2: %s\n", str1, str2);
 	p = ft_memcpy(str1, str2, 5);
 	printf("ft_memcpy: str1: %s %p\n\n", str1, p);
 	ft_strcpy(str1, str3);

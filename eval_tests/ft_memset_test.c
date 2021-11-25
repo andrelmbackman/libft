@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:21:33 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/10 11:07:40 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/25 18:11:29 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main()
 	char	str3[30] = "Hello World! Vote for Pedro.";
 	int		c = 'X';
 
-	printf("str1: %s\n\n", str1);
+	printf("\n\nstr1: %s\n\n", str1);
 	ft_memset(str1, c, 5 * sizeof(char));
 	printf("ft_memset: str1: %s\n\n", str1);
 
