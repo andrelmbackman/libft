@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 11:33:32 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/15 16:26:12 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/26 12:45:15 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memalloc(size_t size)
 {
 	void	*mem;
 
+	if (size < 1)
+		return (NULL);
 	mem = (void *)malloc(size);
 	if (mem == NULL)
 		return (NULL);
