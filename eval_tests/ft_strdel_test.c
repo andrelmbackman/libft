@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:21:33 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/11 14:40:00 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/26 12:59:58 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main()
 
 	if (tests_passed == 2)
 	{
-		printf("\tOK, check for leaks\n");
+		printf("\tft_strdel: OK\n");
 		return (1);
 	}
 	return (0);
