@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 13:35:56 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/24 14:39:16 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/26 19:42:15 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static	int	ft_checkstrn(const char *h, const char *n, size_t i, size_t len)
 		j = 0;
 		if (h[i] == n[j])
 		{
-			while (h[i + j] == n[j])
+			while (h[i + j] == n[j] && len > 0)
 			{
 				j++;
 				len--;
