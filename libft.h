@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:16:24 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/25 16:30:59 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/26 18:37:56 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+void	ft_del(void *content, size_t content_size);
 void	ft_putchar(char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr(const char *s);
@@ -32,6 +33,7 @@ void	ft_putendl_fd(const char *s, int fd);
 void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_bzero(void *s, size_t n);
+void	*ft_free_arr(char **str, size_t size);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
@@ -67,6 +69,7 @@ char	**ft_strsplit(const char *s, char c);
 size_t	ft_strlen(char const *s);
 size_t	ft_countwords(const char *s, char c);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+int		ft_primenbr(int i);
 int		ft_longlen(long n);
 int		ft_strequ(const char *s1, const char *s2);
 int		ft_strnequ(const char *s1, const char *s2, size_t n);
