@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:21:33 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/10 19:00:16 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/26 12:16:09 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,15 @@ int	main()
 	int		i4 = atoi(str4);
 	int		i5 = atoi(str5);
 	int		i6 = atoi(str6);
-	printf("atoi:    %i, %i, %i, %i, %i, %i\n\n", i1, i2, i3, i4, i5, i6);
+	int		i7 = atoi("999999999999999999");
+	printf("atoi:    %i, %i, %i, %i, %i, %i, %i\n\n", i7, i1, i2, i3, i4, i5, i6);
 	i1 = ft_atoi(str1);
 	i2 = ft_atoi(str2);
 	i3 = ft_atoi(str3);
 	i4 = ft_atoi(str4);
 	i5 = ft_atoi(str5);
 	i6 = ft_atoi(str6);
-	printf("ft_atoi: %i, %i, %i, %i, %i, %i\n\n", i1, i2, i3, i4, i5, i6);
+	i7 = ft_atoi("999999999999999999");
+	printf("ft_atoi: %i, %i, %i, %i, %i, %i, %i\n\n", i7, i1, i2, i3, i4, i5, i6);
 	return (0);
 }
