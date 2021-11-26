@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 12:33:00 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/25 13:02:07 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:11:55 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 	if (s == NULL)
 		return ;
-	while (s[i] != '\0' && s != NULL)
+	while (s[i] != '\0' && f)
 	{
 		(f)(i, &s[i]);
 		i++;

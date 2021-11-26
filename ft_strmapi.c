@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 16:43:48 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/23 17:59:36 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:13:33 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	if (str == NULL)
 		return (NULL);
 	i = 0;
-	while (s[i] != '\0' && s != NULL)
+	while (s[i] != '\0' && f)
 	{
 		str[i] = f(i, s[i]);
 		i++;

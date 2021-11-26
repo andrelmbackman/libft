@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:05:27 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/25 15:56:18 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/26 14:02:08 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	char	*str;
 
 	i = ft_strlen(s1);
-	str = (char *)ft_memalloc((i + 1) * sizeof(char));
+	str = (char *)malloc((i + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 11:24:41 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/23 16:21:35 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/26 15:11:42 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striter(char *s, void (*f)(char *))
 	i = 0;
 	if (s == NULL)
 		return ;
-	while (s[i] != '\0' && s != NULL)
+	while (s[i] != '\0' && f)
 	{
 		(f)(&s[i]);
 		i++;
