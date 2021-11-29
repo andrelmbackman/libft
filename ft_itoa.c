@@ -6,11 +6,44 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 14:19:59 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/25 16:27:29 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/29 13:03:16 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	*ft_posnum(long num, size_t len, char *str)
+{
+	str[len--] = '\0';
+	while (len >= 0 && num > 0)
+	{
+		str[len] = ((num % 10) + '0');
+		num /= 10;
+		len--;
+	}
+	return (str);
+}
+
+static char	*ft_negnum(long num, size_t len, char *str)
+{
+	num *= -1;
+	str[0] = '-';
+	str[len--] = '\0';
+	while (len > 0 && num > 0)
+	{
+		str[len] = ((num % 10) + '0');
+		num /= 10;
+		len--;
+	}
+	return (str);
+}
+
+static char	*ft_zeronum(char *str)
+{
+	str[0] = '0';
+	str[1] = '\0';
+	return (str);
+}
 
 char	*ft_itoa(int n)
 {
@@ -18,22 +51,21 @@ char	*ft_itoa(int n)
 	int		length;
 	long	num;
 
-	num = (long)n;
+	if (n == 2147483647)
+		num = 2147483647;
+	else if (n == -2147483648)
+		num = -2147483648;
+	else
+		num = (long)n;
 	length = ft_longlen(num);
 	str = (char *)malloc((length + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	if (num < 0)
-	{
-		num *= -1;
-		str[0] = '-';
-	}
-	str[length--] = '\0';
-	while (length >= 0 && str[length] != '-')
-	{
-		str[length] = ((num % 10) + '0');
-		num /= 10;
-		length--;
-	}
+	if (num == 0)
+		str = ft_zeronum(str);
+	else if (num < 0)
+		str = ft_negnum(num, length, str);
+	else
+		str = ft_posnum(num, length, str);
 	return (str);
 }
