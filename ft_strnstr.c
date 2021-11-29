@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 13:35:56 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/29 16:59:02 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/29 20:24:37 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,19 @@ static	int	ft_checkstrn(const char *h, const char *n, size_t i, size_t len)
 	size_t	orig_len;
 
 	orig_len = len;
-	while (len > 0 && h[i] != '\0')
+	while (i < len && h[i] != '\0')
 	{
 		j = 0;
 		if (h[i] == n[j])
 		{
-			while (h[i + j] == n[j] && len > 0)
+			while (h[i + j] == n[j] && (i + j) < len)
 			{
 				j++;
-				len--;
 				if (n[j] == '\0')
 					return (i);
 			}
 		}
 		i++;
-		len = orig_len - i;
 	}
 	return (-1);
 }
