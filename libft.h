@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:16:24 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/26 18:37:56 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/29 12:55:22 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,8 @@ char	**ft_strsplit(const char *s, char c);
 size_t	ft_strlen(char const *s);
 size_t	ft_countwords(const char *s, char c);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-int		ft_primenbr(int i);
 int		ft_longlen(long n);
+int		ft_primenbr(int i);
 int		ft_strequ(const char *s1, const char *s2);
 int		ft_strnequ(const char *s1, const char *s2, size_t n);
 int		ft_strcmp(const char *s1, const char *s2);
