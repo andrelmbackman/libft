@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:21:33 by abackman          #+#    #+#             */
-/*   Updated: 2021/11/08 15:52:41 by abackman         ###   ########.fr       */
+/*   Updated: 2021/11/30 13:05:08 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,50 @@
 
 int	main()
 {
-	char	str1[30] = "Hello World! Vote for Pedro.";
-	char	str2[] = "Pedro";
-	char	str3[] = "";
-	char	str4[] = "Juan";
-	char	*p;
+	char	buf2[] = "ozarabozaraboze123";
+	int		tests_passed = 0;
+	char *str = "find the needlneedle needle in the haystack";
 
-	p = strnstr(str1, str2, 27);
-	printf("   strnstr the \"%s\" in \"%s\" is at %p\n\n", str2, str1, p);
-	p = ft_strnstr(str1, str2, 27);
-	printf("ft_strnstr the \"%s\" in \"%s\" is at %p\n\n", str2, str1, p);
+	char *p1 = ft_strnstr(str, "needle", 20);
+	char *p2 = strnstr(str, "needle", 20);
 
-	p = strnstr(str1, str3, 5);
-	printf("   strnstr the \"%s\" in \"%s\" is at %p\n\n", str3, str1, p);
-	p = ft_strnstr(str1, str3, 5);
-	printf("ft_strnstr the \"%s\" in \"%s\" is at %p\n\n", str3, str1, p);
+	printf("\n* * * ft_strnstr * * *\n");
+	if (strcmp(ft_strnstr(buf2, "ozaraboze", 15), strnstr(buf2, "ozaraboze", 15)) == 0)
+		tests_passed++;
+	else
+		printf("Haystack: \"%s\"\nNeedle: \"ozaraboze\"\nShould be:\"%s\"\n is:      \"%s\"\n\n", buf2, strnstr(buf2, "ozaraboze", 15), ft_strnstr(buf2, "ozaraboze", 15));
 
-	p = strnstr(str1, str4, 5);
-	printf("   strnstr the \"%s\" in \"%s\" is at %p\n\n", str4, str1, p);
-	p = ft_strnstr(str1, str4, 4);
-	printf("ft_strnstr the \"%s\" in \"%s\" is at %p\n\n", str4, str1, p);
+	 if (strcmp(p1, p2) == 0)
+		tests_passed++;
+	else
+		printf("\nERROR: strcmp(p1, p2) != 0\n%s\n%s\n", p1, p2);
+
+	p1 = ft_strnstr(str, "needle", 19);
+	p2 = strnstr(str, "needle", 19);
+	if (p1 == p2)
+		tests_passed++;
+	else
+		printf("\nERROR: p1 != p2\n%s\n%s\n", p1, p2);
+
+	p1 = ft_strnstr(str, "", 20);
+	p2 = strnstr(str, "", 20);
+	if (strcmp(p1, p2) == 0)
+		tests_passed++;
+	else
+		printf("\nERROR: strcmp(p1, p2) != 0\n%s\n%s\n", p1, p2);
+
+	str = "need the /0 needle!";
+	p1 = ft_strnstr(str, "needle", 19);
+	p2 = strnstr(str, "needle", 19);
+	if (p1 == p2)
+		tests_passed++;
+	else
+		ft_putstr("ERROR: p1 != p2 (after null)");
+
+	if (tests_passed == 5)
+	{
+		printf("\tOK\n");
+		return (1);
+	}
 	return (0);
 }
