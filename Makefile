@@ -30,7 +30,7 @@ PFOBJS = ./ft_printf/conversion.o\
 	./ft_printf/colour.o\
 	./ft_printf/ft_printf.o
 OBJS = $(SRC:.c=.o)
-WRNG = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra
 
 .PHONY: all clean fclean re
 
@@ -38,7 +38,7 @@ all: $(NAME)
 
 $(NAME):
 	@make -C ft_printf
-	gcc $(WRNG) -c $(SRC)
+	gcc $(FLAGS) -c $(SRC)
 	ar rc $(NAME) *.o $(PFOBJS)
 	ranlib $(NAME)
 
