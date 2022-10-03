@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:16:24 by abackman          #+#    #+#             */
-/*   Updated: 2022/09/29 17:28:58 by abackman         ###   ########.fr       */
+/*   Updated: 2022/10/03 14:07:44 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void		*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void		*ft_memmove(void *dst, const void *src, size_t len);
 void		*ft_memchr(const void *s, int c, size_t n);
 void		*ft_memalloc(size_t size);
-void		*ft_realloc(void *ptr, size_t size);
+void		*ft_realloc(void *ptr, size_t ptr_size, size_t size);
 void		ft_memdel(void **ap);
 void		ft_strclr(char *s);
 void		ft_strdel(char **as);
