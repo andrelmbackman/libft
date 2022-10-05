@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:16:24 by abackman          #+#    #+#             */
-/*   Updated: 2022/10/03 14:07:44 by abackman         ###   ########.fr       */
+/*   Updated: 2022/10/05 14:21:27 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void		ft_putnbr(int n);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_bzero(void *s, size_t n);
 void		*ft_free_arr(char **str, size_t size);
+void		*ft_free_arr2(char ***str);
 void		*ft_memset(void *b, int c, size_t len);
 void		*ft_memcpy(void *dst, const void *src, size_t n);
 void		*ft_memccpy(void *dst, const void *src, int c, size_t n);
