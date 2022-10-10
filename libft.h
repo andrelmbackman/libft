@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:16:24 by abackman          #+#    #+#             */
-/*   Updated: 2022/10/05 14:21:27 by abackman         ###   ########.fr       */
+/*   Updated: 2022/10/10 14:04:01 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ char		*ft_strsub(const char *s, unsigned int start, size_t len);
 char		*ft_strjoin(const char *s1, const char *s2);
 char		*ft_strtrim(const char *s);
 char		**ft_strsplit(const char *s, char c);
+char		**ft_strnsplit(const char *s, char c, size_t *n);
 size_t		ft_strlen(char const *s);
 size_t		ft_countwords(const char *s, char c);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
