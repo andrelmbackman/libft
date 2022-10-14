@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 15:49:35 by abackman          #+#    #+#             */
-/*   Updated: 2022/07/08 14:52:04 by abackman         ###   ########.fr       */
+/*   Updated: 2022/10/14 13:27:42 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,19 @@ char	*ft_strchr_int(const char *s, int c)
 }
 
 /*
+** Helper function for strjoin_pro
+*/
+
+static char	*strjoin_error(char	*str1, char *str2, int n)
+{
+	if (n % 2 == 1)
+		ft_strdel(&str1);
+	if (n >= 2)
+		ft_strdel(&str2);
+	return (NULL);
+}
+
+/*
 ** Like strjoin, but giving the option of freeing the argument strings.
 ** n = 1: free str1,
 ** n = 2: free str2,
@@ -58,11 +71,11 @@ char	*strjoin_pro(char *str1, char *str2, int n)
 	char	*str;
 
 	if (str1 == NULL || str2 == NULL)
-		return (NULL);
+		return (strjoin_error(str1, str2, n));
 	i = (ft_strlen_int(str1) + ft_strlen_int(str2));
 	str = (char *)malloc((i + 1) * sizeof(char));
 	if (str == NULL)
-		return (NULL);
+		return (strjoin_error(str1, str2, n));
 	j = 0;
 	i = 0;
 	while (str1[i] != '\0')
