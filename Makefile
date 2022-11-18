@@ -32,7 +32,7 @@ PFOBJS = ./ft_printf/conversion.o\
 	./ft_printf/colour.o\
 	./ft_printf/ft_printf.o
 OBJS = $(SRC:.c=.o)
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra -O1
 
 .PHONY: all clean fclean re
 
