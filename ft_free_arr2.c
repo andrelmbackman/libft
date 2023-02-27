@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_free_arr2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 11:38:08 by abackman          #+#    #+#             */
-/*   Updated: 2022/10/05 12:31:17 by abackman         ###   ########.fr       */
+/*   Created: 2022/10/05 14:16:06 by abackman          #+#    #+#             */
+/*   Updated: 2022/10/05 14:41:50 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# include "../libft.h"
-# define BUFF_SIZE 10
-# define FD_SIZE 4096
+#include "libft.h"
 
-int	get_next_line(const int fd, char **line);
+void	*ft_free_arr2(char ***str)
+{
+	size_t	i;
 
-#endif
+	i = 0;
+	if (str == NULL)
+		return (NULL);
+	while (*str[i])
+	{
+		free(*str[i]);
+		*str[i] = NULL;
+		i++;
+	}
+	free(*str);
+	*str = NULL;
+	return (NULL);
+}

@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_isstrdigit.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 11:38:08 by abackman          #+#    #+#             */
-/*   Updated: 2022/10/05 12:31:17 by abackman         ###   ########.fr       */
+/*   Created: 2022/10/10 14:44:49 by abackman          #+#    #+#             */
+/*   Updated: 2022/10/10 14:55:21 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# include "../libft.h"
-# define BUFF_SIZE 10
-# define FD_SIZE 4096
+#include "libft.h"
 
-int	get_next_line(const int fd, char **line);
+int	ft_isstrdigit(char *str)
+{
+	int	i;
 
-#endif
+	i = 0;
+	while (str[i])
+	{
+		if (!ft_isdigit((int)str[i]))
+			return (0);
+		i++;
+	}
+	return (1);
+}

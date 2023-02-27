@@ -6,7 +6,7 @@
 /*   By: abackman <abackman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 11:37:42 by abackman          #+#    #+#             */
-/*   Updated: 2022/07/14 13:31:41 by abackman         ###   ########.fr       */
+/*   Updated: 2022/11/15 13:11:31 by abackman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,6 @@ int	get_next_line(const int fd, char **line)
 
 	if (fd < 0 || BUFF_SIZE < 1 || fd > FD_SIZE || line == NULL)
 		return (-1);
-	*line = NULL;
 	ft_bzero(tmp, BUFF_SIZE + 1);
 	r_bytes = read(fd, tmp, BUFF_SIZE);
 	while (r_bytes > 0)
