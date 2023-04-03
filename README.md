@@ -1,5 +1,5 @@
 # libft
-C library with useful functions.
+C library with useful functions. Some implementations of Libc functions and some are standard for the 42 curriculum.
 
 ## Usage:
 - in root of repository: make (this will compile the library and create libft.a)
